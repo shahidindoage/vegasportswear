@@ -94,11 +94,11 @@ export const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
         </h2>
         <div className="flex items-baseline gap-3">
           <span className="text-2xl font-black italic text-black">
-            ${product.price.toFixed(2)}
+            ₹{product.price.toFixed(2)}
           </span>
           {product.originalPrice && (
             <span className="text-sm text-gray-400 line-through font-bold">
-              ${product.originalPrice.toFixed(2)}
+              ₹{product.originalPrice.toFixed(2)}
             </span>
           )}
         </div>

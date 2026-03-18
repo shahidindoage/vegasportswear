@@ -4,8 +4,8 @@ export const PRODUCTS: Product[] = [
   {
     id: '1',
     name: 'Vega Performance Jacket',
-    price: 129.00,
-    originalPrice: 159.00,
+    price: 3999.00,
+    originalPrice: 6000.00,
     image: 'p2.jpg',
     category: 'Men',
     rating: 4.8,
@@ -15,7 +15,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '2',
     name: 'Elite Training Shorts',
-    price: 45.00,
+    price: 1099.00,
     image: 'p3.jpg',
     category: 'Men',
     rating: 4.5,
@@ -25,7 +25,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '3',
     name: 'Pro Compression Pant',
-    price: 65.00,
+    price: 2249.00,
     image: 'p6.jpg',
     category: 'Men',
     rating: 4.9,
@@ -35,7 +35,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '4',
     name: 'Velocity Running Tee',
-    price: 38.00,
+    price: 1399.00,
     image: 'p5.jpg',
     category: 'Men',
     rating: 4.7,
@@ -44,7 +44,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '5',
     name: 'Velocity Running Short',
-    price: 25.00,
+    price: 1799.00,
     image: 'p7.jpg',
     category: 'Men',
     rating: 4.6,
@@ -54,7 +54,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '6',
     name: 'HydraFlow Running Short',
-    price: 32.00,
+    price: 1049.00,
     image: 'p8.jpg',
     category: 'Men',
     rating: 4.8,
