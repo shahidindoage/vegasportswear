@@ -42,7 +42,7 @@ export default function App() {
         </section>
 
         {/* Technology Showcase - Technical Grid */}
-        <section className="py-32 bg-[#F8F8F8]">
+        {/* <section className="py-32 bg-[#F8F8F8]">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="text-center mb-24">
               <motion.span 
@@ -79,7 +79,7 @@ export default function App() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Recover Banner - Atmospheric */}
         <section className="relative h-[90vh] flex items-center overflow-hidden bg-black">
@@ -135,7 +135,7 @@ export default function App() {
             </div>
           </div>
 
-          {/* Floating Text Detail */}
+          
           <div className="absolute right-0 bottom-20 vertical-text hidden lg:block pr-8">
             <span className="text-white/20 font-black uppercase italic tracking-[1em] text-xs">
               VEGA PERFORMANCE LABS // 2026
@@ -144,57 +144,86 @@ export default function App() {
         </section>
 
         {/* Athlete Spotlight - Team Apex */}
-        <section className="py-32 bg-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 md:px-8">
-            <div className="flex justify-between items-end mb-24">
-              <div className="max-w-2xl">
-                <span className="text-brand-red font-black uppercase italic tracking-[0.4em] text-xs mb-4 block">The Collective</span>
-                <h2 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none">
-                  Team <br />
-                  <span className="text-brand-red">Vega Elite.</span>
-                </h2>
-              </div>
-              <div className="hidden md:flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full border border-black/10 flex items-center justify-center text-black/20">
-                  <ArrowRight size={24} className="rotate-180" />
-                </div>
-                <div className="w-16 h-16 rounded-full border border-black flex items-center justify-center text-black">
-                  <ArrowRight size={24} />
-                </div>
-              </div>
-            </div>
+        <section className="py-24 md:py-32 bg-white overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 md:px-8">
+    {/* Heading Section */}
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8">
+     <div className="max-w-2xl">
+  <motion.span 
+    initial={{ opacity: 0, x: -20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    className="text-brand-red font-black uppercase italic tracking-[0.4em] text-xs mb-4 block"
+  >
+    Community Curated
+  </motion.span>
+  <h2 className="text-6xl md:text-8xl font-black uppercase italic tracking-tighter leading-[0.95] overflow-visible">
+    The <br />
+    <span className="relative inline-block pr-6 text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-600">
+      Creator
+    </span>
+    <span className="text-brand-red"> Edit.</span>
+  </h2>
+</div>
+      
+      {/* Navigation - Hidden on Mobile for cleaner look */}
+      <div className="hidden md:flex items-center gap-4">
+        <button className="cursor-pointer w-14 h-14 rounded-full border border-black/10 flex items-center justify-center text-black/20 hover:border-black hover:text-black transition-all">
+          <ArrowRight size={20} className="rotate-180" />
+        </button>
+        <button className="cursor-pointer w-14 h-14 rounded-full border border-black flex items-center justify-center text-black hover:bg-black hover:text-white transition-all">
+          <ArrowRight size={20} />
+        </button>
+      </div>
+    </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {ATHLETES.map((athlete, index) => (
-                <motion.div 
-                  key={athlete.id}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group relative h-[70vh] overflow-hidden bg-black"
-                >
-                  <img 
-                    src={athlete.image} 
-                    alt={athlete.name}
-                    className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-60 transition-all duration-1000"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 p-12 flex flex-col justify-end bg-gradient-to-t from-black via-transparent to-transparent">
-                    <span className="text-brand-red font-black uppercase italic tracking-widest text-xs mb-2">{athlete.discipline}</span>
-                    <h3 className="text-4xl font-black text-white uppercase italic tracking-tighter mb-6">{athlete.name}</h3>
-                    <p className="text-gray-300 font-medium italic leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      "{athlete.quote}"
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+    {/* Product/Influencer Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
+      {ATHLETES.map((item, index) => (
+        <motion.div 
+          key={item.id}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="group relative h-[60vh] md:h-[75vh] overflow-hidden bg-zinc-100"
+        >
+          {/* Main Image */}
+          <img 
+            src={item.image} 
+            alt={item.name}
+            className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+            referrerPolicy="no-referrer"
+          />
+
+          {/* Overlay Content */}
+          <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/20 to-transparent">
+            <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+              <span className="text-brand-red font-black uppercase italic tracking-widest text-[10px] mb-2 block">
+                {item.discipline} Selection
+              </span>
+              <h3 className="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tighter mb-4">
+                {item.name}
+              </h3>
+              
+              {/* Product reveal on hover */}
+              <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 overflow-hidden">
+                <p className="text-gray-300 text-sm font-medium italic mb-6">
+                  "{item.quote}"
+                </p>
+                <button className="w-full py-4 bg-white text-black font-black uppercase italic tracking-widest text-xs hover:bg-brand-red hover:text-white transition-colors">
+                  Shop the look
+                </button>
+              </div>
             </div>
           </div>
-        </section>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* Training Types - Vertical Editorial List */}
-        <section className="py-32 bg-[#0A0A0A] text-white">
+        {/* <section className="py-32 bg-[#0A0A0A] text-white">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-8">
               <div className="max-w-2xl">
@@ -228,7 +257,7 @@ export default function App() {
                     </h3>
                   </div>
                   
-                  {/* Hover Image Reveal */}
+               
                   <div className="absolute right-[20%] top-1/2 -translate-y-1/2 w-64 h-40 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none z-20 scale-75 group-hover:scale-100">
                     <img 
                       src={type.image} 
@@ -248,10 +277,10 @@ export default function App() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Sustainability - Impact Section */}
-        <section className="py-32 bg-white">
+        {/* <section className="py-32 bg-white">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
               <motion.div
@@ -299,7 +328,7 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Community Social Wall - Bento Grid */}
         <section className="py-32 bg-[#0A0A0A]">
@@ -362,7 +391,7 @@ export default function App() {
         </section>
 
         {/* Latest News - Magazine Layout */}
-        <section className="py-32 bg-[#F8F8F8]">
+        {/* <section className="py-32 bg-[#F8F8F8]">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="flex justify-between items-end mb-20">
               <h2 className="text-5xl font-black uppercase italic tracking-tighter">The Pulse</h2>
@@ -411,7 +440,7 @@ export default function App() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Features / Trust Badges - Minimal Bar */}
         <section className="py-20 bg-black border-y border-white/10">

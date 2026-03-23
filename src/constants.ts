@@ -66,15 +66,15 @@ export const PRODUCTS: Product[] = [
 export const CATEGORIES: Category[] = [
   {
     id: 'men',
-    title: 'Men\'s Collection',
-    image: 'p9.jpg',
+    title: 'Vega Collection',
+    image: 'p2.jpg',
     link: '/men',
     description: 'Engineered for strength and endurance.',
   },
   {
     id: 'women',
-    title: 'Women\'s Collection',
-    image: 'https://row.gymshark.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fwl6q2in9o7k3%2F5OMVLK07oxcrwfkozMlJ3h%2Fc7650a09e6f1093754ca8ccafd86ea3b%2FHeadless_Cards_-_25720468.jpeg&w=1664&q=95',
+    title: 'EXODE Collection',
+    image: 'p6.jpg',
     link: '/women',
     description: 'Performance meets style in every stitch.',
   },

@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col gap-10 -mt-[40px]">
           <h1 className="text-4xl font-black tracking-tighter uppercase italic leading-none">
             {/* <span className="text-brand-blue">Vega</span><span className="text-brand-red">sportswear</span> */}
-          <img src="logo.png" alt="" width="200"/>
+          <img src="https://vrfacwizigigcpowkrye.supabase.co/storage/v1/object/public/General/vega-logo-2.png" alt="" width="200"/>
           </h1>
           <p className="text-gray-500 font-medium leading-relaxed max-w-xs">
             Premium performance gear engineered for the elite athlete. We push the boundaries of what's possible in sports apparel and accessories.
@@ -96,7 +96,7 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col gap-10">
           <h4 className="text-xs font-black uppercase italic tracking-[0.3em] text-brand-red">Shop</h4>
           <ul className="flex flex-col gap-5 text-gray-400 font-bold uppercase tracking-widest text-[10px]">
-            {['Men\'s Collection', 'Women\'s Collection', 'Accessories', 'New Arrivals', 'Best Sellers'].map((link) => (
+            {['Men\'s Collection', 'Accessories', 'New Arrivals', 'Best Sellers'].map((link) => (
               <li key={link}><a href="#" className="hover:text-white transition-colors">{link}</a></li>
             ))}
           </ul>
