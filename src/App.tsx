@@ -5,13 +5,19 @@ import { SectionHeader, ProductCard, CategoryCard } from './components/Cards';
 import { Newsletter, Footer } from './components/Footer';
 import { PRODUCTS, CATEGORIES, TRAINING_TYPES, ATHLETES, TECH_FEATURES, COMMUNITY_POSTS } from './constants';
 import { Shield, Zap, RefreshCcw, CreditCard, ArrowRight, Users, Cpu, Instagram, Globe } from 'lucide-react';
+import { Routes, Route } from 'react-router-dom'
+import { Exode } from './components/Exode';
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-brand-red selection:text-white">
       <Navbar />
-
-      <main>
+<Routes>
+        {/* Home Page Route */}
+        <Route 
+          path="/" 
+          element={
+            <main>
         <Hero />
 
         {/* Categories - Editorial Split: 40% / 30% / 30% */}
@@ -269,7 +275,7 @@ export default function App() {
     className="absolute inset-0"
   >
     <img
-      src="https://vrfacwizigigcpowkrye.supabase.co/storage/v1/object/public/General/Vega%20sports%20Banner.jpeg"
+      src="https://vrfacwizigigcpowkrye.supabase.co/storage/v1/object/public/General/baanner-2.jpeg"
       alt="Recovery"
       className="w-full h-full object-cover object-center"
       referrerPolicy="no-referrer"
@@ -498,6 +504,16 @@ export default function App() {
 
         <Newsletter />
       </main>
+          } 
+        />
+
+        {/* Exode Page Route */}
+        <Route path="/exode" element={<Exode />} />
+        
+        {/* Optional: 404 Redirect to Home */}
+        <Route path="*" element={<Hero />} />
+      </Routes>
+      
 
       <Footer />
     </div>

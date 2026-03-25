@@ -5,6 +5,10 @@
   --font-display: "Space Grotesk", sans-serif;
   --color-brand-red: #E31E24;
   --color-brand-blue: #21409A;
+   --color-exode-dark: #2B2B1B;
+  --color-exode-orange: #A65221;
+  --color-exode-green: #4A5D23;
+  --color-exode-sand: #D9D1C1;
 }
 
 @layer base {
