@@ -97,25 +97,32 @@ export const TRAINING_TYPES: TrainingType[] = [
 export const ATHLETES = [
   {
     id: '1',
-    name: 'Marcus Thorne',
+    name: 'rwanda team',
     discipline: 'Elite Sprinter',
-    image: 'p10.jpg',
+    image: 's1.jpg',
     quote: 'Vega gear gives me the 1% edge I need on the track.'
   },
   {
     id: '2',
-    name: 'Elena Vance',
+    name: 'nigeria team',
     discipline: 'Crossfit Champion',
-    image: 'https://row.gymshark.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fwl6q2in9o7k3%2F22060BiT4WEqB1reTHaAV8%2F26529f8c69467d3563e99c7e2fe9abcb%2FHeadless_Cards_-_25661344__1_.jpeg&w=1664&q=95',
+    image: 's2.jpg',
     quote: 'Durability is everything. Vega never lets me down.'
   },
   {
     id: '3',
-    name: 'David Chen',
+    name: 'Karnataka team',
     discipline: 'Ultra Marathoner',
-    image: 'p11.jpg',
+    image: 's3.jpg',
     quote: 'The thermal regulation in the Pro series is unmatched.'
-  }
+  },
+  // {
+  //   id: '4',
+  //   name: 'David Chen',
+  //   discipline: 'Ultra Marathoner',
+  //   image: 's4.jpg',
+  //   quote: 'The thermal regulation in the Pro series is unmatched.'
+  // }
 ];
 
 export const TECH_FEATURES = [

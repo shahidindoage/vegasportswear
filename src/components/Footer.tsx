@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col gap-10 -mt-[40px]">
           <h1 className="text-4xl font-black tracking-tighter uppercase italic leading-none">
             {/* <span className="text-brand-blue">Vega</span><span className="text-brand-red">sportswear</span> */}
-          <img src="https://vrfacwizigigcpowkrye.supabase.co/storage/v1/object/public/General/vega-logo-2.png" alt="" width="200"/>
+          <img src="https://vrfacwizigigcpowkrye.supabase.co/storage/v1/object/public/General/Vega%20(2).png" alt="" width="200"/>
           </h1>
           <p className="text-gray-500 font-medium leading-relaxed max-w-xs">
             Premium performance gear engineered for the elite athlete. We push the boundaries of what's possible in sports apparel and accessories.
@@ -118,15 +118,15 @@ export const Footer: React.FC = () => {
           <ul className="flex flex-col gap-8 text-gray-400 font-bold uppercase tracking-widest text-[10px]">
             <li className="flex items-start gap-4">
               <MapPin size={18} className="text-brand-red shrink-0" />
-              <span className="leading-relaxed">First floor , Flat No. C-166, Delhi Road, KT Shop, Major Dhyan Chand Nagar, Meerut, Uttar Pradesh- 250002</span>
+              <span className="leading-relaxed">First floor, Delhi Road, KT Shop, Major Dhyan Chand Nagar, Meerut, Uttar Pradesh- 250002</span>
             </li>
             <li className="flex items-center gap-4">
               <Phone size={18} className="text-brand-red shrink-0" />
-              <span>+1 (800) VEGA-GEAR</span>
+              <span>+91 6398204040</span>
             </li>
             <li className="flex items-center gap-4">
               <Mail size={18} className="text-brand-red shrink-0" />
-              <span>support@vegasportswear.com</span>
+              <span>vega.industries26@gmail.com</span>
             </li>
           </ul>
         </div>
