@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Search, User, ShoppingBag, Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import { href, NavLink } from 'react-router-dom';
 export const ATHLETES = [
   {
     id: '1',
@@ -35,30 +36,32 @@ export const ATHLETES = [
 const NAV_ITEMS = [
   {
     label: 'Products',
+    href:"/",
     dropdown: [
-      { label: 'T-Shirts', href: '#' },
-      { label: 'Polo T-Shirts', href: '#' },
-      { label: 'Performance Jackets', href: '#' },
-      { label: 'Training Shorts', href: '#' },
-      { label: 'Compression Pants', href: '#' },
-      { label: 'Track Pants', href: '#' },
-      { label: 'Hoodies & Sweatshirts', href: '#' },
-      { label: 'Full Sleeves', href: '#' },
+      { label: 'T-Shirts', href: '/' },
+      { label: 'Polo T-Shirts', href: '/' },
+      { label: 'Performance Jackets', href: '/' },
+      { label: 'Training Shorts', href: '/' },
+      { label: 'Compression Pants', href: '/' },
+      { label: 'Track Pants', href: '/' },
+      { label: 'Hoodies & Sweatshirts', href: '/' },
+      { label: 'Full Sleeves', href: '/' },
     ],
   },
   {
     label: 'Accessories',
+    href:"/",
     dropdown: [
-      { label: 'Socks & Grip Socks', href: '#' },
-      { label: 'Caps & Headwear', href: '#' },
-      { label: 'Bags & Backpacks', href: '#' },
-      { label: 'Water Bottles', href: '#' },
-      { label: 'Wristbands', href: '#' },
+      { label: 'Socks & Grip Socks', href: '/' },
+      { label: 'Caps & Headwear', href: '/' },
+      { label: 'Bags & Backpacks', href: '/' },
+      { label: 'Water Bottles', href: '/' },
+      { label: 'Wristbands', href: '/' },
     ],
   },
-  { label: 'New Arrivals', dropdown: null },
-  { label: 'About Us', dropdown: null },
-  { label: 'EXODE', dropdown: null },
+  { label: 'New Arrivals', dropdown: null ,href:"new-arrivals"},
+  { label: 'About Us', dropdown: null,href: '/about' },
+  { label: 'EXODE', dropdown: null,href: '/exode' },
 ];
 
 export const Navbar = () => {
@@ -93,11 +96,13 @@ export const Navbar = () => {
 
           <div className="md:flex-none text-center md:text-left">
             <h1 className="text-2xl font-black tracking-tighter uppercase italic">
+              <NavLink to="/">
               <img
                 src={isScrolled ? 'https://vrfacwizigigcpowkrye.supabase.co/storage/v1/object/public/General/logo.png' : 'https://vrfacwizigigcpowkrye.supabase.co/storage/v1/object/public/General/Vega%20(2).png'}
                 alt="Vega Logo"
                 className="w-24 md:w-28 transition-all duration-300 object-contain"
               />
+              </NavLink>
             </h1>
           </div>
 
@@ -109,15 +114,15 @@ export const Navbar = () => {
                 onMouseEnter={() => item.dropdown && handleMouseEnter(item.label)}
                 onMouseLeave={handleMouseLeave}
               >
-                <a
-                  href="#"
+                <NavLink
+                  to={item.href || '#'}
                   className={`flex items-center gap-1 hover:text-brand-red transition-colors py-2 ${activeDropdown === item.label ? 'text-brand-red' : ''}`}
                 >
                   {item.label}
                   {item.dropdown && (
                     <ChevronDown size={14} className={`transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
                   )}
-                </a>
+                </NavLink>
                 <AnimatePresence>
                   {item.dropdown && activeDropdown === item.label && (
                     <motion.div
