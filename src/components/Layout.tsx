@@ -38,7 +38,7 @@ const NAV_ITEMS = [
     label: 'Products',
     href:"/",
     dropdown: [
-      { label: 'T-Shirts', href: '/' },
+      { label: 'T-Shirts', href: '/products/t-shirts' },
       { label: 'Polo T-Shirts', href: '/' },
       { label: 'Performance Jackets', href: '/' },
       { label: 'Training Shorts', href: '/' },
@@ -59,7 +59,7 @@ const NAV_ITEMS = [
       { label: 'Wristbands', href: '/' },
     ],
   },
-  { label: 'New Arrivals', dropdown: null ,href:"new-arrivals"},
+  { label: 'New Arrivals', dropdown: null ,href:"/new-arrivals"},
   { label: 'About Us', dropdown: null,href: '/about' },
   { label: 'EXODE', dropdown: null,href: '/exode' },
 ];

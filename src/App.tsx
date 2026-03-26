@@ -9,6 +9,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Exode } from './components/Exode';
 import { About } from './components/About';
 import { Arrivals } from './components/Arrivals';
+import { Accessories } from './components/Accessories';
 
 export default function App() {
   return (
@@ -513,6 +514,7 @@ export default function App() {
         <Route path="/exode" element={<Exode />} />
         <Route path="/about" element={<About />} />
         <Route path="/new-arrivals" element={<Arrivals />} />
+        <Route path="/products/t-shirts" element={<Accessories />} />
         {/* Optional: 404 Redirect to Home */}
         <Route path="*" element={<Hero />} />
       </Routes>
